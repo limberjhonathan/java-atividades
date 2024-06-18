@@ -4,4 +4,12 @@ public class TvSmart {
     int volume = 56;
     String marca = "Samsung";
     double valor = 6500.50;
+
+    public void aumentarVolume (){
+        volume++;
+    }
+
+    public void diminuirVolume (){
+        volume--;
+    }
 }
