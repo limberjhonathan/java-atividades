@@ -1,11 +1,10 @@
 public class MinhaClasse {
     public static void main(String[] args) {
-        int nota = 5;
-
-        if (nota > 6) {
-            System.out.println("Aprovado");
-        } else {
-            System.out.println("Reprovado");
-        }
+        TvSmart tv = new TvSmart();
+        System.out.println("A tv esta " + tv.ligada);
+        System.out.println("A tv esta no canal " + tv.canal);
+        System.out.println("A tv esta esta com o volume " + tv.volume);
+        System.out.println("A marca de sua tv é " + tv.marca);
+        System.out.println("O valor de sua tv é R$" + tv.valor);
     }
 }
