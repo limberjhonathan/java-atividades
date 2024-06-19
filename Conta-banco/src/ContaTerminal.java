@@ -19,14 +19,40 @@ public class ContaTerminal {
     }
 
     private static String solicitarAgencia(Scanner scanner) {
-        System.out.print("Por favor, digite o número da Agência: ");
-        return scanner.nextLine();
+        String agencia = "";
+        boolean entradaValida = false;
+
+        while (!entradaValida) {
+            System.out.print("Por favor, digite o número da Agência (somente 4 dígitos): ");
+            agencia = scanner.nextLine();
+
+            if (agencia.matches("\\d{4}")) {
+                agencia = agencia.substring(0, 3) + "-" + agencia.substring(3);
+                entradaValida = true;
+            } else {
+                System.out.println("Apenas números e a agência deve ter exatamente 4 dígitos.");
+            }
+        }
+
+        return agencia;
     }
 
     private static int solicitarNumeroConta(Scanner scanner) {
-        System.out.print("Agora, digite o número da Conta: ");
-        int numero = scanner.nextInt();
-        scanner.nextLine();
+        int numero = 0;
+        boolean entradaValida = false;
+
+        while (!entradaValida) {
+            System.out.print("Agora, digite o número da Conta (4 dígitos): ");
+            String numeroStr = scanner.nextLine();
+
+            if (numeroStr.matches("\\d{4}")) {
+                numero = Integer.parseInt(numeroStr);
+                entradaValida = true;
+            } else {
+                System.out.println("Apenas Números e a conta deve ter exatamente 4 dígitos.");
+            }
+        }
+
         return numero;
     }
 
