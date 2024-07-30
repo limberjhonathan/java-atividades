@@ -30,7 +30,7 @@ public class EstoqueProdutos {
 
   public Produto obterProdutoMaisCaro() {
     Produto produtoMaisCaro = null;
-    double maiorPreco = Double.MIN_VALUE;
+    double maiorPreco = Double.MIN_VALUE; 
     for (Produto p : estoqueProdutosMap.values()) {
       if (p.getPreco() > maiorPreco) {
         produtoMaisCaro = p;
